@@ -1,5 +1,9 @@
 # Deze ReadMe heeft twee onderdelen, bovenaan de Docker setup en onderaan een stuk over dit project.
 
+Link flowchart: [https://imgur.com/mDxFend](url)
+
+Link Trello: [https://imgur.com/yPVJI0N](url)
+
 <hr>
 
 # Docker setup
@@ -51,3 +55,6 @@ In deze docker setup zit ook een phpmyadmin container. Daarmee kun je je databas
 Veel plezier met ontwikkelen van je applicatie!
 "# m10prog-les_2" 
 "# m10prog-laravel" 
+
+
+
