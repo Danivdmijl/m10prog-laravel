@@ -19,3 +19,25 @@ export default {
 
     plugins: [forms],
 };
+
+module.exports = {
+    theme: {
+      extend: {
+        colors: {
+          // Customize your colors here
+          primary: '#1E40AF',
+          secondary: '#FFED4A',
+          // Add more colors as needed
+        },
+        fontFamily: {
+          // Customize your fonts here
+          body: ['Roboto', 'sans-serif'],
+          heading: ['Montserrat', 'sans-serif'],
+          // Add more fonts as needed
+        },
+      },
+    },
+    variants: {},
+    plugins: [],
+  };
+  
