@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,15 @@
     @vite('resources/css/app.css')
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+<style>
+    .navcolor{
+        background: black;
+    }
+</style>
 <body class="bg-gray-100 h-screen">
+    <nav class="navcolor space-x-4 bg-black-100">
+        @include("_navigation")
+    </nav>
 
     <!-- Layout Container -->
     <div class="container mx-auto p-8">
@@ -18,15 +27,6 @@
                 <!-- Your Logo -->
                 <img src="https://images.poms.omroep.nl/image/239309.jpg" alt="Your Logo" class="w-16 h-16">
             </div>
-            <nav>
-                <!-- Navigation Menu -->
-                <ul class="flex space-x-4">
-                    <li><a href="#" class="text-blue-500 hover:text-blue-700">Home</a></li>
-                    <li><a href="#" class="text-blue-500 hover:text-blue-700">About</a></li>
-                    <li><a href="#" class="text-blue-500 hover:text-blue-700">Contact</a></li>
-                    <!-- Add more menu items as needed -->
-                </ul>
-            </nav>
         </header>
 
         <!-- Main Content -->
@@ -68,4 +68,5 @@
     </footer>
 
 </body>
+
 </html>
