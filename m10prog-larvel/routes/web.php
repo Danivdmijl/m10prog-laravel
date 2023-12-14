@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\AboutController;
 use \App\Http\Controllers\WelcomeController;
+use \App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,7 @@ Route::get('/home', [WelcomeController::class, 'index'])->name('home');
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
-Route::get('/projects/add', [ ProjectController::class, 'add' ])->name('project.add');
+Route::get('/project/add', [ ProjectController::class, 'add' ])->name('project.add');
 
 
 require __DIR__.'/auth.php';

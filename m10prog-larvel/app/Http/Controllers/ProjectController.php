@@ -11,7 +11,9 @@ class ProjectController extends Controller
             // Maak een model aan
     $model = new Project();
     // definieer de velden
-    $model->field_one = 'mijn data';
+    $model->titel = 'o mijn god - sam 2020';
+    $model->description = 'Je lijt op een wesp';
+
     // sla het model op
     $model->save();
     }

@@ -9,4 +9,6 @@ class Project extends Model
 {
     use HasFactory;
     
+    public function index() {
+    }
 }
