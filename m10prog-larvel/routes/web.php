@@ -42,5 +42,7 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::get('/project/add', [ ProjectController::class, 'add' ])->name('project.add');
 
+Route::get('/project', [ProjectController::class, 'index'])->name('project');
+
 
 require __DIR__.'/auth.php';
