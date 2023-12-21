@@ -12,9 +12,19 @@ class ProjectController extends Controller
     $model = new Project();
     // definieer de velden
     $model->titel = 'o mijn god - sam 2020';
-    $model->description = 'Je lijt op een wesp';
+    $model->description = 'Je lijkt op een wesp';
 
     // sla het model op
     $model->save();
     }
+
+    public function index() {
+        return view ('project');
+    }
+
+    public function show(Project $show)
+    {
+        return view('project.show', ['project'=>$show]);
+    }
+
 }
