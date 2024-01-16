@@ -1,7 +1,10 @@
+
 <?php
+
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 use \App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProjectAdminController;
 use \App\Http\Controllers\WelcomeController;
@@ -35,21 +38,18 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::prefix('/dashboard')
-     ->middleware(['auth', 'verified'])
-     ->group(function () {
-         Route::get(
-             '/',
-             function () {
-                 return view('dashboard');
-             })->name('dashboard');
+Route::prefix('/dashboard')->group( function() {
+    
+    Route::get('/', function () {
+        return Inertia::render('Dashboard');
+    })->middleware(['auth', 'verified'])->name('dashboard');
 
-         Route::resources(
-             [
-                 'admin' => ProjectAdminController::class,
-             ]
-         );
-     });
+    Route::resources(
+        [
+            'url' => ProjectAdminController::class,
+        ]
+    );
+});
 
 Route::get('/home', [WelcomeController::class, 'index'])->name('home');
 
