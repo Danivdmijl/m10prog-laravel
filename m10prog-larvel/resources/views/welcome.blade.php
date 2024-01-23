@@ -18,7 +18,7 @@
     @include("_navigation")
   </nav>
 
-  <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+  <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard.url')">
     {{ __('Dashboard') }} 
   </x-nav-link>
 

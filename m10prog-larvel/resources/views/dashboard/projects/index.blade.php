@@ -13,6 +13,7 @@
                 <a class="text-black" href="{{$project->title}}">{{ $project->titel }}</a><br>
                 @endforeach
                 {{$projects->links()}}
+
                 </div>
             </div>
         </div>
