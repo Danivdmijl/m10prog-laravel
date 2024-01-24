@@ -15,18 +15,12 @@ class ProjectAdminController extends Controller
 
     public function create()
     {
+        return view('dashboard.projects.create');
     }
 
     public function store(Request $request)
     {
-        $validData = $request->validate([
-            'title' => 'required|unique:projects|max:255',
-            'onderdeel' => 'required',
-        ]);
-
-        $project = Project::create($validData);
-
-        return redirect()->route('projects.index');
+        return "ja binnen";
     }
 
     public function show(Project $project)
@@ -46,18 +40,4 @@ class ProjectAdminController extends Controller
     }
 }
 
-class Project extends Model
-{
-    use HasFactory;
 
-    protected $fillable = ['title', 'intro', 'description', 'active'];
-
-    protected $table = 'projects';
-
-    $item = new Model( $validData );
-    $item->save();
-
-    return redirect( route('project.show', $project->id ) );
-
-
-}
