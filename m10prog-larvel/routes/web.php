@@ -35,7 +35,7 @@ Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group( function()
 
     Route::resources(
         [
-            'url' => ProjectAdminController::class,
+            'projects' => ProjectAdminController::class,
         ]
     );
 });

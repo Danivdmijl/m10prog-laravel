@@ -8,8 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     use HasFactory;
-    
-    public function index() {
-        return view ('project');
-    }
+    protected $fillable = ['titel', 'description'];
 }
